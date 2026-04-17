@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: virostay-postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: nndpg157
+      POSTGRES_DB: virostay_db
+    ports:
+      - '5433:5432'
+    volumes:
+      - virostay-pgdata:/var/lib/postgresql/data
+
+volumes:
+  virostay-pgdata:
